@@ -74,12 +74,15 @@ nav ul li a:hover {
 }
 
 .hero-img {
-  width: 420px;
-  height: 420px;
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 1 / 1; /* Keeps it square */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
   transition: transform 0.3s ease;
+  margin: 0 auto;
+}
 }
 
 .hero-img img {
@@ -374,3 +377,4 @@ nav ul li a:hover {
   0%, 100% { transform: translate(-50%, 0); }
   50% { transform: translate(-50%, 10px); }
 }
+
