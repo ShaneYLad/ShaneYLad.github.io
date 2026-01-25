@@ -161,6 +161,14 @@ nav ul li a:hover {
     margin-top: 10px;
   }
 
+  /* Fix title overlap */
+  .project-section {
+    padding-top: 200px !important;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* Stack blocks */
   .project-details {
     flex-direction: column;
   }
