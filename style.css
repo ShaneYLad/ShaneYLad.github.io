@@ -74,15 +74,12 @@ nav ul li a:hover {
 }
 
 .hero-img {
-  width: 100%;
-  max-width: 420px;
-  aspect-ratio: 1 / 1; /* Keeps it square */
+  width: 420px;
+  height: 420px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
   transition: transform 0.3s ease;
-  margin: 0 auto;
-}
 }
 
 .hero-img img {
@@ -376,5 +373,60 @@ nav ul li a:hover {
 @keyframes bounce {
   0%, 100% { transform: translate(-50%, 0); }
   50% { transform: translate(-50%, 10px); }
+}
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+    padding-top: 120px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  /* Reduce global section padding */
+  section, .project-section, .about-section, .work-section {
+    padding: 120px 20px 60px;
+  }
+
+  /* Make all flex layouts stack */
+  .project-details,
+  .work-grid,
+  .about-grid {
+    flex-direction: column !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Fix images overflowing */
+  img {
+    max-width: 100%;
+    height: auto !important;
+  }
+
+  /* Fix hero section */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 160px 20px 40px;
+  }
+
+  .intro {
+    max-width: 100%;
+  }
+
+  .hero-img {
+    width: 90%;
+    height: auto;
+  }
 }
 
